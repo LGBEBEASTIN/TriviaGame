@@ -1,0 +1,24 @@
+.doneButton {
+    margin-top: 50px;
+}
+
+.results {
+    margin-top: 50px;
+}
+
+.firstQuestion {
+    margin-top: 50px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.jumbotron {
+    color: red;
+    background-color: black;
+}

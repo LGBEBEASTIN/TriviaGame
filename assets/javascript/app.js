@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
     // Hide Content
-    $('.trivia-ques').hide();
+    $('.trivia-questions').hide();
     $('.results').hide();
 
     //Variables
-    let count = 90; //Seconds
+    let count = 60; //Seconds
     let intervalId;
     let correctAns = 0;
     let wrongAns = 0;
@@ -15,7 +15,7 @@ $(document).ready(function() {
 
     // Show Questions
     function showQuestions() {
-        $('.trivia-ques').show();
+        $('.trivia-questions').show();
         $('#game-done').show();
     }
 
@@ -28,7 +28,7 @@ $(document).ready(function() {
     function decrement() {
         count--;
         $('#timer').text(" " + count + " " + "seconds");
-        if (number === 0) {
+        if (count === 0) {
             stop();
             hide();
             displaySummary();
@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     // Hide Questions
     function hide() {
-        $('.trivia-ques').hide();
+        $('.trivia-questions').hide();
         $('#game-done').hide();
     }
 
@@ -69,6 +69,7 @@ $(document).ready(function() {
         $('#game-start').hide();
         hide();
         displaySummary();
+        stop(count);
     });
 
     // Radio Form Buttons

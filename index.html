@@ -8,6 +8,7 @@
     <title>Trivia Game</title>
 
     <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -20,7 +21,7 @@
 
         <!--Start-->
         <div class="row">
-            <div class="col text-center">
+            <div class=" jumbotron col text-center">
                 <h1>Atlanta Hawks Trivia!</h1>
                 <p class="btn btn-danger" id="game-start">Start</p>
             </div>
@@ -33,20 +34,20 @@
         </div>
 
         <!--Questions-->
-        <div class="trivia-ques">
+        <div class="trivia-questions">
 
             <div class="row">
-                <div class="col text-center">
+                <div class="firstQuestion col text-center">
                     <p class="quest">1. How many years has Trae Young played?</p>
                     <form class="question">
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="optradio" class="optradio" value="correct"> One
+                            <input type="radio" name="radiobutton" class="radiobutton" value="correct"> One
                         </label>
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="optradio" class="optradio" value="wrong"> Two
+                            <input type="radio" name="radiobutton" class="radiobutton" value="wrong"> Two
                         </label>
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="optradio" class="optradio" value="wrong"> Three
+                            <input type="radio" name="radiobutton" class="radiobutton" value="wrong"> Three
                         </label>
                     </form>
                 </div>
@@ -57,13 +58,13 @@
                     <p class="quest">2. What number did Dominique Wilkins wear?</p>
                     <form class="question">
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="optradio" class="optradio" value="correct"> 21
+                            <input type="radio" name="radiobutton" class="radiobutton" value="correct"> 21
                         </label>
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="optradio" class="optradio" value="wrong"> 22
+                            <input type="radio" name="radiobutton" class="radiobutton" value="wrong"> 22
                         </label>
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="optradio" class="optradio" value="wrong"> 23
+                            <input type="radio" name="radiobutton" class="radiobutton" value="wrong"> 23
                         </label>
                     </form>
                 </div>
@@ -74,13 +75,13 @@
                     <p class="quest">3. What position does John Collins play?</p>
                     <form class="question">
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="optradio" class="optradio" value="wrong"> Center
+                            <input type="radio" name="radiobutton" class="radiobutton" value="wrong"> Center
                         </label>
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="optradio" class="optradio" value="correct"> Power Forward
+                            <input type="radio" name="radiobutton" class="radiobutton" value="correct"> Power Forward
                         </label>
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="optradio" class="optradio" value="wrong"> Small Forward
+                            <input type="radio" name="radiobutton" class="radiobutton" value="wrong"> Small Forward
                         </label>
                     </form>
                 </div>
@@ -91,20 +92,20 @@
                     <p class="quest">4. Who is the Hawks starting point guard?</p>
                     <form class="question">
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="optradio" class="optradio" value="wrong"> Jalen Adams
+                            <input type="radio" name="radiobutton" class="radiobutton" value="wrong"> Jalen Adams
                         </label>
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="optradio" class="optradio" value="wrong"> Vince Carter
+                            <input type="radio" name="radiobutton" class="radiobutton" value="wrong"> Vince Carter
                         </label>
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="optradio" class="optradio" value="correct"> Trae Young
+                            <input type="radio" name="radiobutton" class="radiobutton" value="correct"> Trae Young
                         </label>
                     </form>
                 </div>
             </div>
 
             <!-- Done Button -->
-            <div class="row">
+            <div class="row doneButton">
                 <div class="col text-center">
                     <button class="lead btn btn-lg btn-danger" id="game-done">Done
                     </button>
