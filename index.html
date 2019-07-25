@@ -16,16 +16,116 @@
 </head>
 
 <body>
-    <!--Game-->
-    <div class="container text-center">
-        <div class="jumbotron">
-            <h1>Totally Trivial Trivia</h1>
-            <h2>Atlanta Hawks Edition</h2>
+    <div class="container text center">
+
+        <!--Start-->
+        <div class="row">
+            <div class="col text-center">
+                <h1>Atlanta Hawks Trivia!</h1>
+                <p class="btn btn-danger" id="game-start">Start</p>
+            </div>
         </div>
-        <button type="button" class="btn btn-danger" id="startGame">Start Game</button>
-        <div class="gameDiv">
+
+        <div class="row">
+            <div class="col text-center">
+                <div id="timer" class="text-center">00:00</div>
+            </div>
         </div>
+
+        <!--Questions-->
+        <div class="trivia-ques">
+
+            <div class="row">
+                <div class="col text-center">
+                    <p class="quest">1. How many years has Trae Young played?</p>
+                    <form class="question">
+                        <label class="form-check form-check-inline text-mysize">
+                            <input type="radio" name="optradio" class="optradio" value="correct"> One
+                        </label>
+                        <label class="form-check form-check-inline text-mysize">
+                            <input type="radio" name="optradio" class="optradio" value="wrong"> Two
+                        </label>
+                        <label class="form-check form-check-inline text-mysize">
+                            <input type="radio" name="optradio" class="optradio" value="wrong"> Three
+                        </label>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col text-center">
+                    <p class="quest">2. What number did Dominique Wilkins wear?</p>
+                    <form class="question">
+                        <label class="form-check form-check-inline text-mysize">
+                            <input type="radio" name="optradio" class="optradio" value="correct"> 21
+                        </label>
+                        <label class="form-check form-check-inline text-mysize">
+                            <input type="radio" name="optradio" class="optradio" value="wrong"> 22
+                        </label>
+                        <label class="form-check form-check-inline text-mysize">
+                            <input type="radio" name="optradio" class="optradio" value="wrong"> 23
+                        </label>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col text-center">
+                    <p class="quest">3. What position does John Collins play?</p>
+                    <form class="question">
+                        <label class="form-check form-check-inline text-mysize">
+                            <input type="radio" name="optradio" class="optradio" value="wrong"> Center
+                        </label>
+                        <label class="form-check form-check-inline text-mysize">
+                            <input type="radio" name="optradio" class="optradio" value="correct"> Power Forward
+                        </label>
+                        <label class="form-check form-check-inline text-mysize">
+                            <input type="radio" name="optradio" class="optradio" value="wrong"> Small Forward
+                        </label>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col text-center">
+                    <p class="quest">4. Who is the Hawks starting point guard?</p>
+                    <form class="question">
+                        <label class="form-check form-check-inline text-mysize">
+                            <input type="radio" name="optradio" class="optradio" value="wrong"> Jalen Adams
+                        </label>
+                        <label class="form-check form-check-inline text-mysize">
+                            <input type="radio" name="optradio" class="optradio" value="wrong"> Vince Carter
+                        </label>
+                        <label class="form-check form-check-inline text-mysize">
+                            <input type="radio" name="optradio" class="optradio" value="correct"> Trae Young
+                        </label>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Done Button -->
+            <div class="row">
+                <div class="col text-center">
+                    <button class="lead btn btn-lg btn-danger" id="game-done">Done
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Last page with Summary of results -->
+        <div class="row">
+            <div class="col text-center">
+                <div class="results">
+                    <p class="lead2" id="summary">Finished!</p>
+                    <p class="lead2" id="correctScore">Correct:</p>
+                    <p class="lead2" id="wrongScore"></p>
+                    <p class="lead2" id="unanswered"></p>
+                </div>
+            </div>
+        </div>
+
     </div>
+
 </body>
 
 <script src="assets/javascript/app.js"></script>
