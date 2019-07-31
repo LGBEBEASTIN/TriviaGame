@@ -1,82 +1,70 @@
 $(document).ready(function() {
 
-    // Hide Content
-    $(".trivia-questions").hide();
-    $(".results").hide();
-
-    //Variables
-    let count = 60; //Seconds
+    //VARIABLES
+    let count = 30;
     let intervalId;
     let correctAns = 0;
     let wrongAns = 0;
     let unanswered = 0;
 
-    // Functions
-
-    // Show Questions
-    function showQuestions() {
-        $(".trivia-questions").show();
-        $("#game-done").show();
-    }
-
+    // FUNCTIONS
     // Timer
     function countdownTimer() {
-        intervalId = setInterval(decrement, 1000);
+        intervalId = setInterval(decrement(), 1000);
     }
-
     // Count Down
     function decrement() {
         count--;
-        $("#timer").text(" " + count + " " + "seconds");
+        $("#timer").text(count);
         if (count === 0) {
             stop();
-            hide();
             displaySummary();
         }
     }
-
     // Clear Timer
     function stop() {
         clearInterval(intervalId);
     }
-
-    // Hide Questions
-    function hide() {
-        $(".trivia-questions").hide();
-        $("#game-done").hide();
-    }
-
     // Summary
     function displaySummary() {
-        $(".results").show();
         unanswered = (4 - (correctAns + wrongAns));
         $("#correctScore").text("Correct Answers: " + correctAns);
         $("#wrongScore").text("Wrong Answers: " + wrongAns);
         $("#unanswered").text("Unanswered: " + unanswered);
     }
 
-    // CLICK EVENTS
-
+    // CLICKEVENTS
     // Start
     $("#game-start").on("click", function() {
-        $("#game-start").hide();
-        showQuestions();
-        countdownTimer();
+        countdownTimer(decrement(), 1000);
     });
-
     // Done
     $("#game-done").on("click", function() {
-        $('#game-start').hide();
-        hide();
         displaySummary();
-        stop(count);
+        stop();
     });
-
     // Radio Form Buttons
+    $("input[type=radio]").on("click", function() {
+        countdownTimer();
+    })
     $("input[type=radio]").on("change", function() {
-        correctAns = $("input[value=correct]:checked").length;
-        wrongAns = $("input[value=wrong]:checked").length;
-        unanswered = (4 - (correctAns + wrongAns));
+
+        if ($(".firstQuestion")) {
+            correctAns = $("input[value=true]:checked").length;
+            wrongAns = $("input[value=false]:checked").length;;
+        }
+        if ($(".secondQuestion")) {
+            correctAns = $("input[value=false]:checked").length;
+            wrongAns = $("input[value=true]:checked").length;
+        }
+        if ($(".thirdQuestion")) {
+            correctAns = $("input[value=true]:checked").length;
+            wrongAns = $("input[value=false]:checked").length;
+        }
+        if ($(".fourthQuestion")) {
+            correctAns = $("input[value=false]:checked").length;
+            wrongAns = $("input[value=true]:checked").length;
+        }
     });
 
 });

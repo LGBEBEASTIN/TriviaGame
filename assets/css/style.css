@@ -1,7 +1,7 @@
 .doneButton,
 .results,
 .firstQuestion {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .question {
@@ -18,7 +18,7 @@ input[type="radio"] {
     background-color: black;
 }
 
-.quest {
+.truefalse {
     background-color: lightgray;
 }
 
@@ -37,4 +37,17 @@ body {
 
 .container {
     border: 5px solid black;
+}
+
+.doneButton {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.startButton {
+    margin-top: 15px;
+}
+
+.results {
+    margin-bottom: 30px;
 }

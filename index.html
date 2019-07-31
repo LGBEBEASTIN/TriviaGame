@@ -23,13 +23,13 @@
         <div class="row">
             <div class=" jumbotron col text-center">
                 <h1>Atlanta Hawks Trivia!</h1>
-                <p class="btn btn-danger" id="game-start">Start</p>
+                <p class="startButton btn btn-danger" id="game-start">Start</p>
             </div>
         </div>
 
         <div class="row">
             <div class="col text-center">
-                <div id="timer" class="text-center">00:00</div>
+                <div id="timer" class="text-center">30</div>
             </div>
         </div>
 
@@ -38,67 +38,55 @@
 
             <div class="row">
                 <div class="firstQuestion col text-center">
-                    <p class="quest">1. How many years has Trae Young played?</p>
+                    <p class="truefalse">1. Trae Young is a rookie.</p>
                     <form class="question">
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="radiobutton" class="radiobutton" value="correct"> One
+                            <input type="radio" name="radiobutton" class="radiobutton" value="true"> True
                         </label>
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="radiobutton" class="radiobutton" value="wrong"> Two
-                        </label>
-                        <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="radiobutton" class="radiobutton" value="wrong"> Three
+                            <input type="radio" name="radiobutton" class="radiobutton" value="false"> False
                         </label>
                     </form>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col text-center">
-                    <p class="quest">2. What number did Dominique Wilkins wear?</p>
+                <div class="secondQuestion col text-center">
+                    <p class="truefalse">2. Dominique Wilkins was a power forward.</p>
                     <form class="question">
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="radiobutton" class="radiobutton" value="correct"> 21
+                            <input type="radio" name="radiobutton" class="radiobutton" value="true"> True
                         </label>
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="radiobutton" class="radiobutton" value="wrong"> 22
-                        </label>
-                        <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="radiobutton" class="radiobutton" value="wrong"> 23
+                            <input type="radio" name="radiobutton" class="radiobutton" value="false"> False
                         </label>
                     </form>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col text-center">
-                    <p class="quest">3. What position does John Collins play?</p>
+                <div class="thirdQuestion col text-center">
+                    <p class="truefalse">3. Alex Len is a Center.</p>
                     <form class="question">
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="radiobutton" class="radiobutton" value="wrong"> Center
+                            <input type="radio" name="radiobutton" class="radiobutton" value="true"> True
                         </label>
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="radiobutton" class="radiobutton" value="correct"> Power Forward
-                        </label>
-                        <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="radiobutton" class="radiobutton" value="wrong"> Small Forward
+                            <input type="radio" name="radiobutton" class="radiobutton" value="false"> False
                         </label>
                     </form>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col text-center">
-                    <p class="quest">4. Who is the Hawks starting point guard?</p>
+                <div class="fourthQuestion col text-center">
+                    <p class="truefalse">4. The Hawks play in Phillips Arena.</p>
                     <form class="question">
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="radiobutton" class="radiobutton" value="wrong"> Jalen Adams
+                            <input type="radio" name="radiobutton" class="radiobutton" value="true"> True
                         </label>
                         <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="radiobutton" class="radiobutton" value="wrong"> Vince Carter
-                        </label>
-                        <label class="form-check form-check-inline text-mysize">
-                            <input type="radio" name="radiobutton" class="radiobutton" value="correct"> Trae Young
+                            <input type="radio" name="radiobutton" class="radiobutton" value="false"> False
                         </label>
                     </form>
                 </div>
@@ -119,8 +107,8 @@
                 <div class="results">
                     <p class="finalResults" id="summary">Finished!</p>
                     <p class="finalResults" id="correctScore">Correct:</p>
-                    <p class="finalResults" id="wrongScore"></p>
-                    <p class="finalResults" id="unanswered"></p>
+                    <p class="finalResults" id="wrongScore">Wrong:</p>
+                    <p class="finalResults" id="unanswered">Unanswered:</p>
                 </div>
             </div>
         </div>
